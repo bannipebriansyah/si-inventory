@@ -59,11 +59,11 @@
               <ul class="dropdown-menu">
                 <li><a href="<?=base_url('user/tabel_barangmasuk');?>">Tabel Barang Masuk</a></li>
                 <li><a href="<?=base_url('user/tabel_barangkeluar');?>">Tabel Barang Keluar</a></li>
-                  <!-- <li><a href="#">Tabel Gudang 3</a></li> -->
+                  
               </ul>
             </li>
-            <!-- <li><a class="nav-link" href="#"><i class="fa fa-book" aria-hidden="true"></i> Page 2</a></li>
-            <li><a class="nav-link" href="#"><i class="fa fa-address-book" aria-hidden="true"></i> Page 3</a></li> -->
+            <li><a class="nav-link" href="<?=base_url('user/formOrder');?>"><i class="fa fa-book" aria-hidden="true"></i>Order</a></li>
+            <!-- <li><a class="nav-link" href="#"><i class="fa fa-address-book" aria-hidden="true"></i> Page 3</a></li> --> -->
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a class="nav-link">Last Login : <?=$this->session->userdata('last_login')?></a></li>            
