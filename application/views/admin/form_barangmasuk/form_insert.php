@@ -258,7 +258,13 @@
                 </div>
                 <div class="form-group" style="display:inline-block;">
                   <label for="kode_barang" style="width:87%;margin-left: 12px;">Kode Barang / Barcode</label>
-                  <input type="text" name="kode_barang" style="width: 90%;margin-right: 67px;margin-left: 11px;" class="form-control" id="kode_barang" placeholder="Kode Barang">
+                  <!-- <input type="text" name="kode_barang" style="width: 90%;margin-right: 67px;margin-left: 11px;" class="form-control" id="kode_barang" placeholder="Kode Barang"> -->
+                  <select class="form-control" name="kode_barang" style="width: 90%;margin-right: 67px;margin-left: 11px;">
+                    <option value="" selected="">-- Pilih --</option>
+                    <?php foreach($list_jenisbarang as $s){ ?>
+                    <option value="<?=$s->kode_jenisbarang?>"><?=$s->nama_jenisbarang?></option>
+                    <?php } ?>
+                  </select>
                 </div>
                 <div class="form-group" style="display:inline-block;">
                   <label for="nama_Barang" style="width:73%;">Nama Barang</label>
