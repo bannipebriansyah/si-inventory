@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
-<div class="container" style="margin-top: 90px;">
+<div class="container" style="margin-top: 150px;">
     <!-- Main content -->
     <section class="content">
       <div class="row">
@@ -110,8 +110,8 @@
                   <!-- <input type="text" name="kode_barang" style="width: 90%;margin-right: 67px;margin-left: 11px;" class="form-control" id="kode_barang" placeholder="Kode Barang"> -->
                   <select class="form-control" name="satuan" style="width: 90%;margin-right: 67px;margin-left: 11px;">
                     <option value="" selected="">-- Pilih --</option>
-                    <?php foreach($list_satuan as $s){ ?>
-                    <option value="<?=$s->kode_satuan?>"><?=$s->nama_satuan?></option>
+                    <?php foreach($list_data as $s){ ?>
+                    <option value="<?=$s->kode_jenisbarang?>"><?=$s->nama_jenisbarang?></option>
                     <?php } ?>
                   </select>
                 </div>
