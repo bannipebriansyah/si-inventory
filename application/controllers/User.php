@@ -105,8 +105,11 @@ class User extends CI_Controller
 
   public function formOrder()
   {
+    $data['list_data'] = $this->M_user->select('tb_jenisbarang');
+    $data['list_satuan'] = $this->M_user->select('tb_satuan');
+    // $this->load->view('user/tabel/tabel_barangkeluar',$data);
     $this->load->view('user/templates/header.php');
-    $this->load->view('user/form/form_order.php');
+    $this->load->view('user/form/form_order.php',$data);
     // $data['list_data'] = $this->M_user->select('tb_barang_keluar');
     // $this->load->view('user/tabel/tabel_barangkeluar',$data);
     // $this->load->view('user/templates/footer.php');
