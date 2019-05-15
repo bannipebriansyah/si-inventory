@@ -135,6 +135,7 @@
           <ul class="treeview-menu">
             <li><a href="<?= base_url('admin/form_barangmasuk')?>"><i class="fa fa-circle-o"></i> Tambah Data Barang Masuk</a></li>
             <li><a href="<?= base_url('admin/form_satuan')?>"><i class="fa fa-circle-o"></i> Tambah Satuan Barang</a></li>
+            <li class=""><a href="<?= base_url('admin/form_jenisbarang') ?>"><i class="fa fa-circle-o"></i> Tambah Jenis Barang</a></li>
           </ul>
         </li>
         <li class="treeview active">
@@ -148,6 +149,7 @@
             <li class="active"><a href="<?= base_url('admin/tabel_barangmasuk')?>"><i class="fa fa-circle-o"></i> Tabel Barang Masuk</a></li>
             <li><a href="<?= base_url('admin/tabel_barangkeluar')?>"><i class="fa fa-circle-o"></i> Tabel Barang Keluar</a></li>
             <li><a href="<?= base_url('admin/tabel_satuan')?>"><i class="fa fa-circle-o"></i> Tabel Satuan</a></li>
+            <li><a href="<?= base_url('admin/tabel_jenisbarang')?>"><i class="fa fa-circle-o"></i> Tabel Jenis Barang</a></li>
           </ul>
         </li>
         <li class="header">LABELS</li>
@@ -211,10 +213,10 @@
                   <label for="tanggal" style="margin-left:220px;display:inline;">Tanggal Masuk</label>
                   <input type="text" name="tanggal" style="margin-left:66px;width:20%;display:inline;" class="form-control" readonly="readonly" value="<?=$d->tanggal?>">
                 </div>
-                <div class="form-group">
+               <!--  <div class="form-group">
                   <label for="tanggal_keluar" style="margin-left:220px;display:inline;">Tanggal Keluar</label>
                   <input type="text" name="tanggal_keluar" style="margin-left:66px;width:20%;display:inline;" class="form-control form_datetime" required="" placeholder="Klik Disini">
-                </div>
+                </div> -->
                 <div class="form-group" style="margin-bottom:40px;">
                   <label for="lokasi" style="margin-left:220px;display:inline;">Lokasi</label>
                   <input type="text" name="lokasi" style="margin-left:117px;width:20%;display:inline;" class="form-control" readonly="readonly" value="<?=$d->lokasi?>">
