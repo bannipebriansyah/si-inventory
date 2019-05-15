@@ -210,6 +210,7 @@
             <ul class="treeview-menu">
               <li><a href="<?php echo base_url('admin/form_barangmasuk') ?>"><i class="fa fa-circle-o"></i> Tambah Data Barang Masuk</a></li>
               <li><a href="<?php echo base_url('admin/form_satuan') ?>"><i class="fa fa-circle-o"></i> Tambah Satuan Barang</a></li>
+              <li><a href="<?php echo base_url('admin/form_jenisbarang') ?>"><i class="fa fa-circle-o"></i> Tambah Jenis Barang</a></li>
             </ul>
           </li>
           <li class="treeview">
@@ -223,6 +224,7 @@
               <li><a href="<?= base_url('admin/tabel_barangmasuk') ?>"><i class="fa fa-circle-o"></i> Tabel Barang Masuk</a></li>
               <li><a href="<?= base_url('admin/tabel_barangkeluar') ?>"><i class="fa fa-circle-o"></i> Tabel Barang Keluar</a></li>
               <li><a href="<?= base_url('admin/tabel_satuan') ?>"><i class="fa fa-circle-o"></i> Tabel Satuan</a></li>
+              <li><a href="<?php echo base_url('admin/form_satuan') ?>"><i class="fa fa-circle-o"></i> Tabel Jenis Barang</a></li>
             </ul>
 
           <li class="header">LABELS</li>
