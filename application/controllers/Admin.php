@@ -301,7 +301,7 @@ class Admin extends CI_Controller{
     if($this->form_validation->run() == TRUE)
     {
       $id_transaksi = $this->input->post('id_transaksi',TRUE);
-      $tanggal      = $this->input->post('tanggal',TRUE);
+      // $tanggal      = $this->input->post('tanggal',TRUE);
       $lokasi       = $this->input->post('lokasi',TRUE);
       $kode_barang  = $this->input->post('kode_barang',TRUE);
       $nama_barang  = $this->input->post('nama_barang',TRUE);
@@ -310,7 +310,7 @@ class Admin extends CI_Controller{
 
       $data = array(
             'id_transaksi' => $id_transaksi,
-            'tanggal'      => $tanggal,
+            // 'tanggal'      => $tanggal,
             'lokasi'       => $lokasi,
             'kode_barang'  => $kode_barang,
             'nama_barang'  => $nama_barang,
@@ -337,7 +337,7 @@ class Admin extends CI_Controller{
     if($this->form_validation->run() == TRUE)
     {
       $id_transaksi = $this->input->post('id_transaksi',TRUE);
-      $tanggal      = $this->input->post('tanggal',TRUE);
+      // $tanggal      = $this->input->post('tanggal',TRUE);
       $lokasi       = $this->input->post('lokasi',TRUE);
       $kode_barang  = $this->input->post('kode_barang',TRUE);
       $nama_barang  = $this->input->post('nama_barang',TRUE);

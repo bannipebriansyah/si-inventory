@@ -214,11 +214,11 @@
                   <label for="id_transaksi" style="margin-left:220px;display:inline;">ID Transaksi</label>
                   <input type="text" name="id_transaksi" style="margin-left:37px;width:20%;display:inline;" class="form-control" readonly="readonly" value="SI-<?=date("Y");?><?=random_string('numeric', 8);?>">
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                   <label for="tanggal" style="margin-left:220px;display:inline;">Tanggal</label>
                   <input type="text" name="tanggal" style="margin-left:66px;width:20%;display:inline;" class="form-control form_datetime" placeholder="Klik Disini">
                 </div>
-                <div class="form-group" style="margin-bottom:40px;">
+ -->                <div class="form-group" style="margin-bottom:40px;">
                   <label for="nama_barang" style="margin-left:220px;display:inline;">Lokasi</label>
                   <select class="form-control" name="lokasi" style="margin-left:75px;width:20%;display:inline;">
                     <option value="">-- Pilih --</option>
@@ -540,7 +540,7 @@
         format: 'dd/mm/yyyy',
         autoclose: true,
         todayBtn: true,
-        pickTime: false,
+        pickTime: true,
         minView: 2,
         maxView: 4,
       });
