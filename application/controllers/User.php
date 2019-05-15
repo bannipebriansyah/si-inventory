@@ -103,6 +103,51 @@ class User extends CI_Controller
     $this->load->view('user/templates/footer.php');
   }
 
+  public function formOrder()
+  {
+    $this->load->view('user/templates/header.php');
+    $this->load->view('user/form/form_order.php');
+    // $data['list_data'] = $this->M_user->select('tb_barang_keluar');
+    // $this->load->view('user/tabel/tabel_barangkeluar',$data);
+    // $this->load->view('user/templates/footer.php');
+  }
+
+  public function proses_order_insert()
+  {
+    $this->form_validation->set_rules('lokasi','Lokasi','required');
+    $this->form_validation->set_rules('kode_barang','Kode Barang','required');
+    $this->form_validation->set_rules('nama_barang','Nama Barang','required');
+    $this->form_validation->set_rules('jumlah','Jumlah','required');
+
+    if($this->form_validation->run() == TRUE)
+    {
+      $id_transaksi = $this->input->post('id_transaksi',TRUE);
+      // $tanggal      = $this->input->post('tanggal',TRUE);
+      $lokasi       = $this->input->post('lokasi',TRUE);
+      $kode_barang  = $this->input->post('kode_barang',TRUE);
+      $nama_barang  = $this->input->post('nama_barang',TRUE);
+      $satuan       = $this->input->post('satuan',TRUE);
+      $jumlah       = $this->input->post('jumlah',TRUE);
+
+      $data = array(
+            'id_transaksi' => $id_transaksi,
+            // 'tanggal'      => $tanggal,
+            'lokasi'       => $lokasi,
+            'kode_barang'  => $kode_barang,
+            'nama_barang'  => $nama_barang,
+            'satuan'       => $satuan,
+            'jumlah'       => $jumlah
+      );
+      $this->M_admin->insert('tb_barang_masuk',$data);
+
+      $this->session->set_flashdata('msg_berhasil','Data Barang Berhasil Ditambahkan');
+      redirect(base_url('admin/form_barangmasuk'));
+    }else {
+      $data['list_satuan'] = $this->M_admin->select('tb_satuan');
+      $this->load->view('admin/form_barangmasuk/form_insert',$data);
+    }
+  }
+
 }
 
 ?>
