@@ -105,7 +105,7 @@ class Report extends CI_Controller
     $tgl1 = $this->uri->segment(4);
     $tgl2 = $this->uri->segment(5);
     $tgl3 = $this->uri->segment(6);
-    $ls   = array('id_transaksi' => $id ,'tanggal_keluar' => $tgl1.'/'.$tgl2.'/'.$tgl3);
+    $ls   = array('id_transaksi' => $id);
     $data = $this->M_admin->get_data('tb_barang_keluar',$ls);
 
     $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
@@ -147,7 +147,7 @@ class Report extends CI_Controller
         <h1 align="center">Invoice Bukti Pengeluaran Barang</h1><br>
         <p>No Id Transaksi  : '.$id.'</p>
         <p>Ditunjukan Untuk :</p>
-        <p>Tanggal          : '.$tgl1.'/'.$tgl2.'/'.$tgl3.'</p>
+        <p>Tanggal          : '.$tgl1.'</p>
         <p>Po.Customer      :</p>
 
 
